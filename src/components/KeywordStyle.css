@@ -1,0 +1,265 @@
+/* 기본 레이아웃 */
+.dashboard-container {
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-timestamp {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* 탭 스타일 */
+.tab-container {
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.tab-button {
+    padding: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.tab-button:hover {
+    color: #4b5563;
+}
+
+.tab-button.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* 카드 스타일 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.stat-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.stat-value.green {
+    color: #10b981;
+}
+
+.stat-value.amber {
+    color: #f59e0b;
+}
+
+.stat-subtext {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+/* 차트 컨테이너 */
+.chart-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.chart-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+.chart-area {
+    height: 20rem;
+}
+
+/* 키워드 목록 스타일 */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.select-control,
+.search-input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    margin-right: 0.5rem;
+}
+
+.keyword-list {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.keyword-count {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.keyword-count strong {
+    color: #374151;
+}
+
+.sort-info {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.scrollable-list {
+    max-height: 37.5rem;
+    overflow-y: auto;
+}
+
+.keyword-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.keyword-item:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.keyword-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.keyword-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.status-badge.exposed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge.not-exposed {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.status-badge.no-url {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.url-list {
+    margin-top: 0.5rem;
+}
+
+.url-list-heading {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.url-list-empty {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.url-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.url-indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+}
+
+.url-indicator.exposed {
+    background-color: #10b981;
+}
+
+.url-indicator.not-exposed {
+    background-color: #ef4444;
+}
+
+.url-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.url-link:hover {
+    text-decoration: underline;
+}
+
+.url-badge {
+    font-size: 0.75rem;
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    margin-left: 0.5rem;
+}
