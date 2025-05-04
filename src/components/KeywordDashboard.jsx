@@ -22,8 +22,6 @@ const KeywordExposureDashboard = () => {
     const [sortBy, setSortBy] = useState("keyword");
     const [sortDirection, setSortDirection] = useState("asc");
     const [filter, setFilter] = useState("");
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(10);
 
     // 색상 팔레트
     const PIE_COLORS = ["#10b981", "#f87171", "#6b7280"];
@@ -126,15 +124,6 @@ const KeywordExposureDashboard = () => {
         setLoading(false);
     };
 
-    const handleSort = (column) => {
-        if (sortBy === column) {
-            setSortDirection(sortDirection === "asc" ? "desc" : "asc");
-        } else {
-            setSortBy(column);
-            setSortDirection("asc");
-        }
-    };
-
     const getSortedData = () => {
         if (!data) return [];
 
@@ -156,17 +145,6 @@ const KeywordExposureDashboard = () => {
             return sortDirection === "asc" ? comparison : -comparison;
         });
     };
-
-    const getPaginatedData = () => {
-        const sortedData = getSortedData();
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        return sortedData.slice(startIndex, startIndex + itemsPerPage);
-    };
-
-    const pageCount = data
-        ? Math.ceil(getSortedData().length / itemsPerPage)
-        : 0;
-
     const getStatusClass = (status) => {
         switch (status) {
             case "노출됨":
@@ -394,7 +372,6 @@ const KeywordExposureDashboard = () => {
                                 className="mr-2 px-3 py-2 border border-gray-300 rounded-lg"
                             >
                                 <option value="keyword">키워드순</option>
-                                <option value="totalUrls">URL 수순</option>
                                 <option value="exposureStatus">
                                     노출 상태순
                                 </option>
