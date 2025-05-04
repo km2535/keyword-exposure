@@ -1,10 +1,10 @@
 import "./App.css";
-import KeywordExposureDashboard from "./components/KeywordDashboard";
+import KeywordDashboard from "./components/KeywordDashboard";
 
 function App() {
     return (
         <div className="App">
-            <KeywordExposureDashboard />
+            <KeywordDashboard />
         </div>
     );
 }
