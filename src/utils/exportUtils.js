@@ -78,7 +78,7 @@ const getCategoryLabel = (categoryId) => {
     const categories = {
         cancer: "암",
         diabetes: "당뇨",
-        cosmetics: "화장품",
+        cosmetics: "갱년기",
     };
 
     return categories[categoryId] || categoryId;

@@ -14,7 +14,7 @@ const CATEGORIES = {
     },
     cosmetics: {
         id: "cosmetics",
-        name: "화장품",
+        name: "갱년기",
         dataFile: "/data/latest_results_cream.json",
     },
 };
